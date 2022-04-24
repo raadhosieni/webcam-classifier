@@ -4,8 +4,13 @@ let classifier;
 function setup() {
   createCanvas(600, 400);
   video = createCapture(VIDEO);
+  video.hide();
   classifier = ml5.imageClassifier("MobileNet", vedio, modelReady);
   background(0);
+}
+
+function draw() {
+  Image(0, 0, vedio);
 }
 
 function modelReady() {
