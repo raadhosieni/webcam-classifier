@@ -15,8 +15,6 @@ function setup() {
 
 function draw() {
   image(video, 0, 0, width, height);
-
-  fill(0);
   textSize(64);
   text(results[0].label, 10, height - 100);
 }
