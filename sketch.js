@@ -24,6 +24,6 @@ function gotResults(error, results) {
   } else {
     fill(0);
     textSize(64);
-    text(results[0].label, 10, 100);
+    text(results[0].label, 10, height - 100);
   }
 }
