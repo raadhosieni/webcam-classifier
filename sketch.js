@@ -3,9 +3,12 @@ let classifier;
 
 function setup() {
   createCanvas(640, 480);
+
   video = createCapture(VIDEO);
   video.hide();
+
   classifier = ml5.imageClassifier("MobileNet", video, modelReady);
+
   background(0);
 }
 
@@ -14,11 +17,11 @@ function draw() {
 }
 
 function modelReady() {
-  alert("model is ready");
   classifier.classify(gotResults);
 }
 
 function gotResults(error, results) {
+  alert("got results");
   if (error) {
     console.error(error.message);
   } else {
