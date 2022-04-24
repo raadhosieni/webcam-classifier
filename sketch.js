@@ -1,5 +1,6 @@
 let video;
 let classifier;
+let label;
 
 function setup() {
   createCanvas(640, 480);
@@ -14,6 +15,10 @@ function setup() {
 
 function draw() {
   image(video, 0, 0, width, height);
+
+  fill(0);
+  textSize(64);
+  text(results[0].label, 10, height - 100);
 }
 
 function modelReady() {
@@ -21,12 +26,9 @@ function modelReady() {
 }
 
 function gotResults(error, results) {
-  alert("got results");
   if (error) {
     console.error(error.message);
   } else {
-    fill(0);
-    textSize(64);
-    text(results[0].label, 10, height - 100);
+    label = results[0].label;
   }
 }
