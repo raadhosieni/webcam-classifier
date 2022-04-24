@@ -14,7 +14,7 @@ function draw() {
 }
 
 function modelReady() {
-  console.log("Model is ready");
+  alert("model is ready");
   classifier.classify(gotResults);
 }
 
