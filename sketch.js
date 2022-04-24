@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  image(video, 0, 0, width, height);
+  image(video, 0, 0);
 }
 
 function modelReady() {
@@ -27,9 +27,8 @@ function gotResults(error, results) {
   } else {
     label = results[0].label;
     fill(0);
-    textSize(32);
+    textSize(64);
     text(label, 10, height - 100);
-    alert(label);
     classifier.classify(gotResults);
   }
 }
