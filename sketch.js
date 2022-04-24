@@ -3,7 +3,7 @@ let classifier;
 let label = "";
 
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(540, 480);
   video = createCapture(VIDEO);
   video.hide();
   background(0);
@@ -11,10 +11,11 @@ function setup() {
 }
 
 function draw() {
+  background(0);
   image(video, 0, 0, width, height);
-  fill(0);
-  textSize(64);
-  text(label, 10, height - 100);
+  fill(255);
+  textSize(32);
+  text(label, 10, height - 20);
 }
 
 function modelReady() {
