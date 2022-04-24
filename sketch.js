@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  image(video, width, height);
+  image(video, 0, 0, width, height);
 }
 
 function modelReady() {
