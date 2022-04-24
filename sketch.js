@@ -2,10 +2,10 @@ let video;
 let classifier;
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(640, 480);
   video = createCapture(VIDEO);
   video.hide();
-  classifier = ml5.imageClassifier("MobileNet", vedio, modelReady);
+  classifier = ml5.imageClassifier("MobileNet", video, modelReady);
   background(0);
 }
 
