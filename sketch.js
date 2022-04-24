@@ -27,8 +27,9 @@ function gotResults(error, results) {
   } else {
     label = results[0].label;
     fill(0);
-    textSize(64);
+    textSize(32);
     text(label, 10, height - 100);
+    alert(label);
     classifier.classify(gotResults);
   }
 }
