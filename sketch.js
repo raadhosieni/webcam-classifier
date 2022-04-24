@@ -10,7 +10,7 @@ function setup() {
 }
 
 function draw() {
-  Image(0, 0, vedio);
+  Image(video, 0, 0);
 }
 
 function modelReady() {
